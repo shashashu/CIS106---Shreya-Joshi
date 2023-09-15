@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="shrey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-15 03:09:11 PM"/>
+        <attribute name="created" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMDktMTU7MDE6MTM6MTcgUE07MjgwNw=="/>
+        <attribute name="edited" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMDktMTU7MDM6MDk6MTEgUE07MzsyOTE4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="mealtotal" type="Real" array="False" size=""/>
+            <declare name="fifttip" type="Real" array="False" size=""/>
+            <declare name="eighttip" type="Real" array="False" size=""/>
+            <declare name="twenttip" type="Real" array="False" size=""/>
+            <declare name="totalwtip15" type="Real" array="False" size=""/>
+            <declare name="totalwtip18" type="Real" array="False" size=""/>
+            <declare name="totalwtip20" type="Real" array="False" size=""/>
+            <input variable="mealtotal"/>
+            <assign variable="fifttip" expression="mealtotal * .15"/>
+            <assign variable="totalwtip15" expression="mealtotal + fifttip"/>
+            <assign variable="eighttip" expression="mealtotal * .18"/>
+            <assign variable="totalwtip18" expression="mealtotal + eighttip"/>
+            <assign variable="twenttip" expression="mealtotal * .20"/>
+            <assign variable="totalwtip20" expression="mealtotal + twenttip"/>
+            <output expression="&quot;With 15% tip:&quot;" newline="True"/>
+            <output expression="&quot;  Total: &quot; &amp;mealtotal &amp;  &#13;&#10;&quot;  Tip:  &quot;  &amp;fifttip  &amp;  &#13;&#10;&quot;  Total with tip: &quot; &amp;totalwtip15" newline="True"/>
+            <output expression="&quot;With 18% tip&quot;" newline="True"/>
+            <output expression="&quot;  Total: &quot; &amp;mealtotal &amp;  &#13;&#10;&quot;  Tip:  &quot;  &amp;eighttip  &amp;  &#13;&#10;&quot;  Total with tip: &quot; &amp;totalwtip18" newline="True"/>
+            <output expression="&quot;With 20% tip&quot;" newline="True"/>
+            <output expression="&quot;  Total: &quot; &amp;mealtotal &amp;  &#13;&#10;&quot;  Tip:  &quot;  &amp;twenttip  &amp;  &#13;&#10;&quot;  Total with tip: &quot; &amp;totalwtip20" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

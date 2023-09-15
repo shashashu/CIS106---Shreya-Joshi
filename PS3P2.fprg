@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="shrey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-15 03:25:35 PM"/>
+        <attribute name="created" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMDktMTU7MTI6MjQ6MzEgUE07MjgwNw=="/>
+        <attribute name="edited" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMDktMTU7MDM6MjU6MzUgUE07MjsyOTIx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ppshare" type="Real" array="False" size=""/>
+            <declare name="curstockprice" type="Real" array="False" size=""/>
+            <declare name="quantstock" type="Real" array="False" size=""/>
+            <declare name="valueofstock" type="Real" array="False" size=""/>
+            <input variable="ppshare"/>
+            <input variable="curstockprice"/>
+            <input variable="quantstock"/>
+            <assign variable="valueofstock" expression="(curstockprice - ppshare) * quantstock"/>
+            <output expression="&quot;The value of your stock is $&quot; &amp;valueofstock" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

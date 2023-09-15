@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="shrey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-15 12:24:29 PM"/>
+        <attribute name="created" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMDktMTU7MTE6NTQ6MTggQU07Mjc5OQ=="/>
+        <attribute name="edited" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMDktMTU7MTI6MjQ6MjkgUE07MTsyOTIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="exam1" type="Real" array="False" size=""/>
+            <declare name="exam1weight" type="Real" array="False" size=""/>
+            <declare name="exam2" type="Real" array="False" size=""/>
+            <declare name="exam2weight" type="Real" array="False" size=""/>
+            <declare name="totalscore" type="Integer" array="False" size=""/>
+            <input variable="exam1"/>
+            <input variable="exam2"/>
+            <assign variable="exam1weight" expression="exam1 * .60"/>
+            <assign variable="exam2weight" expression="exam2 * .40"/>
+            <assign variable="totalscore" expression="exam1weight + exam2weight"/>
+            <output expression="&quot;the total score of your two exams are &quot; &amp;totalscore" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
