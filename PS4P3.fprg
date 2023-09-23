@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="shrey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-23 03:24:53 PM"/>
+        <attribute name="created" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMDktMjM7MDI6MTE6MTAgUE07Mjc5OA=="/>
+        <attribute name="edited" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMDktMjM7MDM6MjQ6NTMgUE07MjsyOTE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="booknum" type="Real" array="False" size=""/>
+            <declare name="bookcost" type="Real" array="False" size=""/>
+            <declare name="shipcost" type="Real" array="False" size=""/>
+            <declare name="ordertotal" type="Real" array="False" size=""/>
+            <declare name="fullordertlt" type="Real" array="False" size=""/>
+            <input variable="booknum"/>
+            <input variable="bookcost"/>
+            <assign variable="ordertotal" expression="booknum * bookcost"/>
+            <if expression="ordertotal &lt;= 50">
+                <then>
+                    <assign variable="shipcost" expression="25.00"/>
+                </then>
+                <else>
+                    <assign variable="shipcost" expression="0"/>
+                </else>
+            </if>
+            <assign variable="fullordertlt" expression="ordertotal + shipcost"/>
+            <output expression="&quot;Your order total is $&quot; &amp;ordertotal" newline="True"/>
+            <output expression="&quot;Your shipping charge is $&quot; &amp;shipcost" newline="True"/>
+            <output expression="&quot;Total cost: $&quot; &amp;fullordertlt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
