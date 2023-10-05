@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="shrey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-04 10:54:36 PM"/>
+        <attribute name="created" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMTAtMDQ7MTA6MzQ6MTkgUE07MjgwMg=="/>
+        <attribute name="edited" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMTAtMDQ7MTA6NTQ6MzYgUE07MTsyOTEx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="counter" type="Real" array="False" size=""/>
+            <declare name="response" type="String" array="False" size=""/>
+            <declare name="lname" type="String" array="False" size=""/>
+            <declare name="score1" type="Real" array="False" size=""/>
+            <declare name="score2" type="Real" array="False" size=""/>
+            <declare name="avgscore" type="Real" array="False" size=""/>
+            <assign variable="counter" expression="0"/>
+            <output expression="&quot;Do you want the average score of your two exam scores? (Yes or No)&quot;" newline="True"/>
+            <input variable="response"/>
+            <while expression="response = &quot;Yes&quot;">
+                <assign variable="counter" expression="counter + 1"/>
+                <output expression="&quot;Enter student last name&quot;" newline="True"/>
+                <input variable="lname"/>
+                <output expression="&quot;Enter exam 1 score&quot;" newline="True"/>
+                <input variable="score1"/>
+                <output expression="&quot;Enter exam 2 score&quot;" newline="True"/>
+                <input variable="score2"/>
+                <assign variable="avgscore" expression="(score1 + score2)/2"/>
+                <output expression="&quot;Student &quot; &amp;lname &amp; &quot; has an average score of &quot; &amp;avgscore" newline="True"/>
+                <output expression="&quot;Do you want the average score of another two of your exam scores? (Yes or No)&quot;" newline="True"/>
+                <input variable="response"/>
+            </while>
+            <output expression="&quot;Total number of students &quot; &amp;counter" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
