@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="shrey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-21 04:52:14 PM"/>
+        <attribute name="created" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMTAtMjE7MDM6MTk6NTMgUE07MjgwNA=="/>
+        <attribute name="edited" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMTAtMjE7MDQ6NTI6MTQgUE07MjsyOTA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lname" type="String" array="False" size=""/>
+            <declare name="hits" type="Real" array="False" size=""/>
+            <declare name="atbats" type="Real" array="False" size=""/>
+            <declare name="batavg" type="Real" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="r" type="String" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <input variable="r"/>
+            <while expression="r == &quot;y&quot;">
+                <assign variable="count" expression="count + 1"/>
+                <input variable="lname"/>
+                <input variable="hits"/>
+                <input variable="atbats"/>
+                <assign variable="batavg" expression="hits / atbats"/>
+                <output expression="lname &amp; &quot; has a batting average of: &quot; &amp;batavg" newline="True"/>
+                <input variable="r"/>
+            </while>
+            <output expression="&quot;Number of players entered: &quot; &amp;count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

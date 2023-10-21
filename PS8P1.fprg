@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="shrey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-21 03:19:50 PM"/>
+        <attribute name="created" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMTAtMjE7MDI6NTI6NTMgUE07MjgwMA=="/>
+        <attribute name="edited" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMTAtMjE7MDM6MTk6NTAgUE07MTsyOTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="extprice" type="Real" array="False" size=""/>
+            <declare name="ttlextprice" type="Real" array="False" size=""/>
+            <declare name="discamnt" type="Real" array="False" size=""/>
+            <declare name="newextprice" type="Real" array="False" size=""/>
+            <declare name="r" type="String" array="False" size=""/>
+            <assign variable="ttlextprice" expression="0"/>
+            <input variable="r"/>
+            <while expression="r == &quot;y&quot;">
+                <input variable="qty"/>
+                <input variable="price"/>
+                <assign variable="extprice" expression="qty * price"/>
+                <if expression="extprice &gt; 10000">
+                    <then>
+                        <assign variable="discamnt" expression="extprice * .10"/>
+                    </then>
+                    <else>
+                        <assign variable="discamnt" expression="0"/>
+                    </else>
+                </if>
+                <assign variable="newextprice" expression="extprice - discamnt"/>
+                <assign variable="ttlextprice" expression="ttlextprice + extprice"/>
+                <output expression="&quot;Your Extended Price is: &quot; &amp;newextprice" newline="True"/>
+                <input variable="r"/>
+            </while>
+            <output expression="&quot;Your total extended price is: &quot; &amp;ttlextprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

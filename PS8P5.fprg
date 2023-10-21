@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="shrey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-21 04:27:32 PM"/>
+        <attribute name="created" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMTAtMjE7MDQ6MTQ6MjAgUE07Mjc5NA=="/>
+        <attribute name="edited" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMTAtMjE7MDQ6Mjc6MzIgUE07MTsyOTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lname" type="String" array="False" size=""/>
+            <declare name="credits" type="Real" array="False" size=""/>
+            <declare name="code" type="String" array="False" size=""/>
+            <declare name="pph" type="Real" array="False" size=""/>
+            <declare name="tuit" type="Real" array="False" size=""/>
+            <declare name="ttltuit" type="Real" array="False" size=""/>
+            <declare name="r" type="String" array="False" size=""/>
+            <assign variable="ttltuit" expression="0"/>
+            <input variable="r"/>
+            <while expression="r == &quot;y&quot;">
+                <input variable="lname"/>
+                <input variable="code"/>
+                <if expression="code == &quot;I&quot;">
+                    <then>
+                        <assign variable="pph" expression="250"/>
+                    </then>
+                    <else>
+                        <if expression="code == &quot;O&quot;">
+                            <then>
+                                <assign variable="pph" expression="550"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <input variable="credits"/>
+                <assign variable="tuit" expression="credits * pph"/>
+                <assign variable="ttltuit" expression="ttltuit + tuit"/>
+                <output expression="lname &amp; &quot; tuition owed: &quot; &amp; tuit" newline="True"/>
+                <input variable="r"/>
+            </while>
+            <output expression="&quot;Total of all tuition owed: &quot; &amp;ttltuit" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

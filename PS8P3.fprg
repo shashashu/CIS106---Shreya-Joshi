@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="shrey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-21 05:07:57 PM"/>
+        <attribute name="created" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMTAtMjE7MDM6Mzk6NTMgUE07MjgwNg=="/>
+        <attribute name="edited" value="c2hyZXk7TEFQVE9QLTdGMjczNDlKOzIwMjMtMTAtMjE7MDU6MDc6NTcgUE07MjsyOTE2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="city" type="String" array="False" size=""/>
+            <declare name="miles" type="Real" array="False" size=""/>
+            <declare name="gallons" type="Real" array="False" size=""/>
+            <declare name="mpg" type="Real" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="r" type="String" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <input variable="r"/>
+            <while expression="r == &quot;y&quot;">
+                <assign variable="count" expression="count + 1"/>
+                <input variable="city"/>
+                <input variable="miles"/>
+                <input variable="gallons"/>
+                <assign variable="mpg" expression="miles / gallons"/>
+                <output expression="miles &amp; &quot; miles travelled to drive to &quot; &amp; city" newline="True"/>
+                <output expression="&quot; Estimated amount of miles per gallon: &quot; &amp;mpg" newline="True"/>
+                <input variable="r"/>
+            </while>
+            <output expression="&quot;Total number of trips taken: &quot; &amp;count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
